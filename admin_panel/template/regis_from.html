@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hotel Booking</title>
+        <style>
+            .a{
+                font-size: 20px;
+                color: maroon;
+            }
+            .h1{
+    
+               font-size: 50px;
+               color:brown; 
+            }
+            
+        </style>
+    </head>
+    <body style="background-color:lightskyblue;">
+        <h1 align="center" style="font-size:70px;"><i>Hotel Booking-Admin Panel</i></h1>
+        <div class="topnav" align="center">
+            
+            <a class="a" href="/homepage/">Home </a>
+            &nbsp;&nbsp;<a class="a" href="/admin_room/">Rooms</a>
+            &nbsp;&nbsp;<a class="a" href="/admin_registration/">Registred</a>
+            &nbsp;&nbsp;<a class="a" href="#contact">Contact</a>
+
+        </div>
+        <div align="right">
+            <a href="/login/" style="color:red;">Login</a>
+            &nbsp;&nbsp;<a href="#" style="color:red;">Register</a>
+        </div>
+        <br>
+        <br>
+        <div>
+        <form align="center" action="register_view" method="POST">
+            {% csrf_token %}
+            <label style="font-size:35px;color:red;">Registration Form</label><br><br>
+            
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname1"><br><br>
+
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+
+            <label for="email">Email</label>
+            <input type="text" id="email1" name="email"><br><br>
+
+            <label for="pass">Password</label>
+            <input type="text" id="pass1" name="pass"><br><br>
+            
+            <label for="experi">Experience</label>
+            <input type="text" id="expe" name="exper"><br><br>
+
+            <button type="submit" style="font-size:20px;background-color: coral;">Register</button><br><br>
+            <label for="msg">Already have a Register? <a href="/login/">Log In</a></label>
+        </form>
+        </div>
+    </body>
+</html>

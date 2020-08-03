@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hotel Booking Admin Panel</title>
+        <style>
+            .a{
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body style="background-color:rgb(210, 168, 30)">
+        <h1 align="center" style="font-size:50px;"><i>Hotel Booking Admin Panel</i></h1>
+        <div class="topnav" align="center">
+            <a class="a" href="homepage/">Home </a>
+            &nbsp;&nbsp;<a class="a" href="/admin_room/">Rooms</a>
+            &nbsp;&nbsp;<a class="a" href="/admin_registration/">Registred</a>
+            &nbsp;&nbsp;<a class="a" href="#contact">Contact</a>
+        </div>
+        <div align="right">
+            <a href="/login/" style="color:red;">Login</a>
+            &nbsp;&nbsp;<a href="/registred/" style="color:red;">Register</a>
+        </div>
+        
+        <h1 align="center">Registerd Client Record</h1>
+        <table align="center" border="2px">
+        <tr>
+            <th>First Name</th>
+            <br>
+            <th>Last Name</th>
+            <br>
+            <th>Email</th>
+            <br>
+            <th>password</th>
+        </tr>
+        {% for item in data %}
+        <tr> 
+            <td>{{ item.fname }}</td>
+            <td>{{ item.lname }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.password }}</td>
+           
+        </tr>
+        
+        {% endfor %}
+        </table>
+    </body>
+</html>

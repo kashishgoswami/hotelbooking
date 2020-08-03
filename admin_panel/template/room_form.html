@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hotel Booking</title>
+    </head>
+    <body style="background-color:rgb(213, 176, 230);">
+        <h1 align="center" style="font-size:50px;"><i>Hotel Booking-Admin Panel</i></h1>
+        <div class="topnav" align="center">
+            <a class="active" href="/homepage/">Home </a>
+            &nbsp;&nbsp;<a href="/admin_room/">Rooms</a>
+            &nbsp;&nbsp;<a href="/admin_registration/">Registered</a>
+            &nbsp;&nbsp;<a href="#contact">Contact</a>
+        </div>
+        <div align="right">
+            <a href="/login/" style="color:red;">Login</a>
+            &nbsp;&nbsp;<a href="/registred/" style="color:red;">Register</a>
+        </div>
+        <br>
+        <br>
+        <div>
+        <form align="center" action="/admin_room/room_insert/" method="POST">
+            {% csrf_token %}
+            <label style="font-size:35px;color:red;">Room Form</label><br><br>
+            
+            <label for="price">Price</label>
+            <input type="text" id="fname" name="price"><br><br>
+
+            <label for="lname">Last name:</label>
+            <input type="date" id="dateav" name="dateavail"><br><br>
+
+            
+            <button type="submit" style="font-size:20px;background-color: coral;">Add Room</button><br><br>
+           
+        </form>
+        </div>
+    </body>
+</html>

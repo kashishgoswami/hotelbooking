@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <!-- <title>Hotel Booking</title> -->
+        <style>
+            .a{
+                color: yellow;  
+            }
+            .b
+            {
+                color: green;
+                font-size: 20px;
+            }
+            .body1
+            {
+                background-image: url( "{% static '/3.jpg' %}");
+                background-size: 1300px;
+            }
+
+        </style>
+    </head>
+    <body class="body1">
+        <h1 align="center" style="font-size:50px;"><i>Hotel Booking</i></h1>
+        <div class="topnav" align="center">
+            <a href="#" class=a >Home </a>
+            &nbsp;&nbsp;<a class=a href="rooms">Rooms</a>
+            &nbsp;&nbsp;<a class=a href="#about">About</a>
+            &nbsp;&nbsp;<a class=a href="#contact">Contact</a>
+        </div>
+        <div align="right">
+            <a href="login" class=b>Login</a>
+            &nbsp;&nbsp;<a href="register" class=b>Register</a>
+        </div>
+    </img>
+    </body>
+</html>
